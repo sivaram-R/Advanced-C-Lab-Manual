@@ -15,6 +15,7 @@ Else
 6.	Return 0
  
 Program:
+```
 #include <stdio.h>
 
 struct eligible {
@@ -48,7 +49,7 @@ int main() {
     }
     return 0;
 }
-
+```
 Output:
 
 ![image](https://github.com/user-attachments/assets/312ed4e8-0dfb-4b29-b1be-2867dfc3ecdf)
@@ -74,18 +75,38 @@ Algorithm:
 7.	Return 0
  
 Program:
+```
+#include <stdio.h>
 
-//type your code here
+struct numbers {
+    int a;
+    int b;
+};
 
+struct numbers add(struct numbers n) {
+    struct numbers result;
+    result.a = n.a + n.b;
+    return result;
+}
 
+int main() {
+    struct numbers n, res;
+    
+    printf("Enter two numbers:\n");
+    scanf("%d%d", &n.a, &n.b);
+    
+    res = add(n);
+    
+    printf("Sum = %d\n", res.a);
+    
+    return 0;
+}
 
+```
 
 Output:
 
-
-//paste your output here
-
-
+![image](https://github.com/user-attachments/assets/90dea6ce-9b2a-47ea-8e58-1e4088e5e929)
 
 
 Result:
