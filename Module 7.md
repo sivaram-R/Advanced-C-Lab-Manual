@@ -15,13 +15,44 @@ Else
 6.	Return 0
  
 Program:
+#include <stdio.h>
 
-//type your code here
+struct eligible {
+    int age;
+    char n[50];
+};
 
+int main() {
+    struct eligible e[5];
+    int i, n;
+    
+    printf("Enter the number of persons: ");
+    scanf("%d", &n);
+    
+    for(i = 0; i < n; i++) {
+        printf("\nEnter name: ");
+        scanf("%s", e[i].n);
+        printf("Enter age: ");
+        scanf("%d", &e[i].age);
+    }
+    
+    for(i = 0; i < n; i++) {
+        printf("\nDetails of person %d:\n", i+1);
+        printf("Name: %s\n", e[i].n);
+        printf("Age: %d\n", e[i].age);
+        if(e[i].age <= 6) {
+            printf("Vaccine Eligibility: No\n");
+        } else {
+            printf("Vaccine Eligibility: Yes\n");
+        }
+    }
+    return 0;
+}
 
 Output:
 
-//paste your output here
+![image](https://github.com/user-attachments/assets/312ed4e8-0dfb-4b29-b1be-2867dfc3ecdf)
+
 
 
 Result:
