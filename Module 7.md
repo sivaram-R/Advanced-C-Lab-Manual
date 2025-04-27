@@ -65,7 +65,7 @@ Thus, the program is verified successfully.
 ### Aim:
 To write a C program for passing structure as function and returning a structure from a function
 
-Algorithm:
+### Algorithm:
 1.	Define structure numbers with members a and b.
 2.	Declare variable n of type numbers.
 3.	Prompt the user to enter values for a and b.
