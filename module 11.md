@@ -242,7 +242,7 @@ int main() {
 ```
 
 ### Output:
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/d12bc961-016c-4445-81e6-0fa0f96eb5b7)
 
 
 ### Result:
