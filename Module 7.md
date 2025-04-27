@@ -137,25 +137,36 @@ Use scanf to input the file name into the name array.
 5.	Return 0 to indicate successful program execution.
  
 Program:
+```
+#include <stdio.h>
 
-//type your code here
+int main() {
+    FILE *p;
+    char name[50];
+    
+    printf("Enter the file name: ");
+    scanf("%s", name);
+    
+    p = fopen(name, "w");
+    
+    if(p == NULL) {
+        printf("Error opening file!\n");
+        return 1;
+    }
+    
+    printf("File '%s' created successfully.\n", name);
+    
+    fclose(p);
+    printf("File closed successfully.\n");
+    
+    return 0;
+}
 
-
-
+```
 
 Output:
 
-
-//paste your output here
-
-
-
-
-
-
-
-
-
+![image](https://github.com/user-attachments/assets/f58dd651-0103-496f-97d8-f8a91b495e3b)
 
 
 Result:
@@ -184,21 +195,45 @@ Use scanf to input the file name into the name array and the number of strings i
 5.	Return 0 to indicate successful program execution.
  
 Program:
+```
+#include <stdio.h>
 
-//type your code here
+int main() {
+    FILE *p;
+    char name[50], text[100];
+    int num, i;
+    
+    printf("Enter the file name: ");
+    scanf("%s", name);
+    
+    printf("Enter number of lines to write: ");
+    scanf("%d", &num);
+    
+    p = fopen(name, "w");
+    
+    if(p == NULL) {
+        printf("Error opening file!\n");
+        return 1;
+    }
+    
+    printf("Enter the text lines:\n");
+    for(i = 0; i < num; i++) {
+        scanf(" %[^\n]", text);
+        fputs(text, p);
+        fputs("\n", p);
+    }
+    
+    fclose(p);
+    printf("Data written successfully and file closed.\n");
+    
+    return 0;
+}
 
-
+```
 
 
 Output:
-
-
-//paste your output here
-
-
-
-
-
+![image](https://github.com/user-attachments/assets/b9711c93-55de-4955-b199-cea5b4cb4b15)
 
 Result:
 Thus, the program is verified successfully
@@ -238,21 +273,49 @@ Algorithm:
 13.End the program by returning 0.
 
 Program:
+```
+#include <stdio.h>
+#include <stdlib.h>
 
-//type your code here
+struct subject {
+    char name[50];
+    int marks;
+};
 
+int main() {
+    int n, i;
+    struct subject *s;
+    
+    printf("Enter the number of subjects: ");
+    scanf("%d", &n);
+    
+    s = (struct subject*)malloc(n * sizeof(struct subject));
+    
+    if(s == NULL) {
+        printf("Memory allocation failed!\n");
+        return 1;
+    }
+    
+    for(i = 0; i < n; i++) {
+        printf("Enter subject name: ");
+        scanf("%s", s[i].name);
+        printf("Enter marks: ");
+        scanf("%d", &s[i].marks);
+    }
+    
+    printf("\nSubject Details:\n");
+    for(i = 0; i < n; i++) {
+        printf("Subject: %s, Marks: %d\n", s[i].name, s[i].marks);
+    }
+    
+    free(s);
+    
+    return 0;
+}
 
-
-
+```
 Output:
-
-
-//paste your output here
-
-
-
-
-
+![image](https://github.com/user-attachments/assets/9256319f-1b95-49e9-ae76-b390dd5559fb)
 
 Result:
 Thus, the program is verified successfully
