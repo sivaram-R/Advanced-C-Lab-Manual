@@ -258,7 +258,7 @@ Thus, the program to insert an element in doubly linked list is verified success
 
 ## EXP NO:20 C FUNCTION TO DELETE A GIVEN ELEMENT IN THE GIVEN LINKED LIST
 
-###Aim:
+### Aim:
 To write a C function that deletes a given element from a linked list.
 
 ### Algorithm:
